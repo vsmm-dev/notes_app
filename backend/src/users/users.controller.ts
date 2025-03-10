@@ -17,7 +17,7 @@ export class UsersController {
   constructor(private readonly usersService: UserService) {}
 
   @Post()
-  @SkipAuth() // No necesita JWT
+  @SkipAuth()
   create(@Body() createUserDto: CreateUserDto) {
     return this.usersService.create(createUserDto);
   }
